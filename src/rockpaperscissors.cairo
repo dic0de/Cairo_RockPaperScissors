@@ -360,6 +360,7 @@ func set_tling{
         end
     ret
     end
+    reset()
 
     return()
     

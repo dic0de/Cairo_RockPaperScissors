@@ -1,5 +1,220 @@
 [
     {
+        "members": [
+            {
+                "name": "join",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "choose",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "reveal",
+                "offset": 2,
+                "type": "felt"
+            },
+            {
+                "name": "settle",
+                "offset": 3,
+                "type": "felt"
+            },
+            {
+                "name": "p_layer",
+                "offset": 4,
+                "type": "felt"
+            },
+            {
+                "name": "winner",
+                "offset": 5,
+                "type": "felt"
+            }
+        ],
+        "name": "matchState",
+        "size": 6,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "player0ne",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "playerTwo",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "playerResults",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "gameId",
+                "offset": 0,
+                "type": "felt"
+            }
+        ],
+        "name": "matches",
+        "size": 1,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "matchId",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "champ",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "loser",
+                "offset": 2,
+                "type": "felt"
+            },
+            {
+                "name": "drawn",
+                "offset": 3,
+                "type": "felt"
+            }
+        ],
+        "name": "matchStore",
+        "size": 4,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "played",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "submitted",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "choice",
+                "offset": 2,
+                "type": "felt"
+            },
+            {
+                "name": "revealed",
+                "offset": 3,
+                "type": "felt"
+            },
+            {
+                "name": "settled",
+                "offset": 4,
+                "type": "felt"
+            },
+            {
+                "name": "allowed",
+                "offset": 5,
+                "type": "felt"
+            }
+        ],
+        "name": "PlayerInfo",
+        "size": 6,
+        "type": "struct"
+    },
+    {
+        "inputs": [
+            {
+                "name": "addresses_len",
+                "type": "felt"
+            },
+            {
+                "name": "addresses",
+                "type": "felt*"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "get_state",
+        "outputs": [
+            {
+                "name": "state",
+                "type": "matchState"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_player_Results",
+        "outputs": [
+            {
+                "name": "results",
+                "type": "playerResults"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_TotalGames",
+        "outputs": [
+            {
+                "name": "mat",
+                "type": "matches"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "id",
+                "type": "felt"
+            }
+        ],
+        "name": "get_matchResults",
+        "outputs": [
+            {
+                "name": "match_results",
+                "type": "matchStore"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "user",
+                "type": "felt"
+            }
+        ],
+        "name": "get_playerInfo",
+        "outputs": [
+            {
+                "name": "playerstate",
+                "type": "PlayerInfo"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "name": "play",
@@ -22,23 +237,13 @@
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "name": "choose",
-                "type": "felt"
-            }
-        ],
+        "inputs": [],
         "name": "revealing",
         "outputs": [],
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "name": "res",
-                "type": "felt"
-            }
-        ],
+        "inputs": [],
         "name": "set_tling",
         "outputs": [],
         "type": "function"
