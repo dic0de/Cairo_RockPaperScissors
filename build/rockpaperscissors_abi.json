@@ -1,0 +1,46 @@
+[
+    {
+        "inputs": [
+            {
+                "name": "play",
+                "type": "felt"
+            }
+        ],
+        "name": "joining",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "choose",
+                "type": "felt"
+            }
+        ],
+        "name": "submitting",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "choose",
+                "type": "felt"
+            }
+        ],
+        "name": "revealing",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "res",
+                "type": "felt"
+            }
+        ],
+        "name": "set_tling",
+        "outputs": [],
+        "type": "function"
+    }
+]
